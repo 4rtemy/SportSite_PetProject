@@ -1,0 +1,1095 @@
+/* Browsers Style Reset */
+
+@import "null_style.sass"
+
+// Width Variables
+$header_width: 100% - (165px / 1500px * 100%) * 2
+
+// Color Variables
+$dark-blue-col: #333740
+$dark-gray-col: #666666
+$light-gray-col: #83888f
+$light-blue-col: #18a3dd
+
+/* Font Family Redeclaration */
+*
+  font-family: 'Lato', sans-serif
+h1, h2, h3, h4, h5, h6, header p
+  font-family: 'Raleway', sans-serif
+p
+  font-size: 16px
+  color: $dark-gray-col
+  font-weight: 300
+
+h1, h2
+  font-size: 72px
+
+a
+  color: $dark-gray-col
+
+// Button Class
+.main-btn
+  font-size: 16px
+  background-color: $light-blue-col
+  padding: 19px 38px
+  border-radius: 50px
+  font-weight: 700
+  color: #fff
+  letter-spacing: 0.4px
+
+// Separator Classes
+.header_separator
+  position: relative
+
+.header_separator p, .header_separator h1, .header_separator h2, .header_separator h3, .header_separator h4, .header_separator h5, .header_separator h6
+  line-height: 72%
+  margin-left: 20px
+
+.header_separator:before
+  content: ' '
+  position: absolute
+  width: 5px
+  height: 100%
+  top: 0
+  border-radius: 2px
+  background-color: $light-blue-col
+
+
+//Headline
+header
+  display: flex
+  align-items: center
+  flex-direction: column
+  .headline, .headline h3, .headline span
+    color: $dark-blue-col
+    font-size: 30px
+    font-weight: 700
+    text-transform: uppercase
+    font-family: 'Raleway'
+    @media (max-width: 400px)
+      font-size: 22px
+  .headline
+    position: relative
+    & h3
+      display: inline-block
+    & div
+      display: inline-block
+      background-color: $light-blue-col
+      height: 40px
+      width: 2px
+      position: absolute
+      margin: auto 16px
+      top: 0
+      bottom: 0
+      @media (max-width: 400px)
+          height: 100%
+    & span
+      font-weight: 300
+      margin-left: 32px
+      line-height: 72%
+      @media (max-width: 400px)
+        line-height: 1
+  & p
+    margin-top: 20px
+    font-family: 'Lato'
+    color: $light-gray-col
+    letter-spacing: 0.4px
+
+/* Work Space */
+
+// Menu
+.nav
+  width: 100%
+  background-color: #fff
+  height: 120px
+  position: fixed
+  z-index: 100
+  &__container
+    width: $header_width
+    height: 100%
+    margin: 0 auto
+    background: #fff
+    border-bottom: 1px solid #ebebeb
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__logo
+    height: 100%
+    display: flex
+    align-items: center
+    & img
+      width: 100%
+      height: 60%
+      display: inline-block
+      object-fit: contain
+      vertical-align: middle
+    &:after
+      content: 'Supplement'
+      font-size: 16px
+      color: $dark-gray-col
+      margin-left: 12px
+      font-family: HelveticaNeueCyr
+      font-weight: 900
+
+  &__menu
+    width: 8%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    & i
+      font-size: 40px
+      color: $dark-gray-col
+      cursor: pointer
+      @media (max-width: 768px)
+        font-size: 60px
+
+  .menu
+    &__container
+      position: fixed
+      left: 0
+      top: 0
+      bottom: 0
+      right: 0
+      z-index: 10
+      background-color: $light-blue-col
+      width: 100vw
+      height: 100vh
+      &-removed
+        width: 100%
+        height: 100%
+        top: -100%
+        transition: all 0.7s ease-in 0s
+      &-showed
+        width: 100%
+        height: 100%
+        top: 0
+        transition: all 1.3s ease-out 0s
+    &__list
+      display: flex
+      height: 100%
+      width: 100%
+      padding: 50px 0
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+      @media (max-width: 768px)
+        padding: 125px 0
+    &__item
+      & a
+        padding: 0 20px
+        border-bottom: 2px solid #4BD3FF
+        color: #D4F5FF
+        font-weight: 700
+        font-size: 24px
+        text-transform: uppercase
+        transition: 1s
+        @media (max-width: 768px)
+          font-size: 35px
+        &:hover
+          color: #fff
+          border: none
+          letter-spacing: 50px
+          background-color: #fff
+          color: #000
+          padding: 10px 20px
+    &__remove
+      position: absolute
+      top: 0
+      right: 0
+      z-index: 20
+      padding: 30px 50px 0 0
+      & i
+        font-size: 40px
+        color: #fff
+        cursor: pointer
+        @media (max-width: 768px)
+          font-size: 60px
+
+// 1st Section
+
+.section-1
+  width: 100%
+  height: 820px
+  padding-top: 120px
+  &__container
+    width: 100% - (165px / 1500px * 100%)
+    height: 100%
+    float: right
+    display: inline-flex
+    justify-content: space-between
+    align-items: center
+    @media (max-width: 990px)
+      width: 100%
+      padding: 0 0 0 70px
+    @media (max-width: 850px)
+      padding: 0 0 0 30px
+    @media (max-width: 700px)
+      padding: 0 50px
+  &__column_left
+    width: 33%
+    @media (max-width: 1350px)
+      width: 40%
+    @media (max-width: 1100px)
+      width: 45%
+    @media (max-width: 990px)
+      width: 50%
+    @media (max-width: 850px)
+      width: 60%
+    @media (max-width: 700px)
+      width: 100%
+
+  &__header
+    color: $dark-blue-col
+    display: block
+    & h1
+      font-size: 72px
+      text-transform: uppercase
+      font-weight: 900
+      margin-left: 30px
+      @media (max-width: 1450px)
+        line-height: 1
+    & p
+      color: $dark-blue-col
+      font-size: 24px
+      text-transform: capitalize
+      font-weight: 800
+      margin-top: 22px
+      margin-left: 30px
+      @media (max-width: 1450px)
+        line-height: 1
+  &__row
+    margin-top: 70px
+  &__btns
+    margin-top: 45px
+    & button:nth-child(2)
+      font-family: 'Lato', sans-serif
+      font-weight: 700
+      font-size: 16px
+      color: $dark-blue-col
+      background: transparent
+      text-transform: uppercase
+      vertical-align: center
+      letter-spacing: 0.4px
+      margin-left: 27px
+      & i
+        color: $light-blue-col
+        margin-left: 8px
+      @media (max-width: 500px)
+        margin: 30px 0 0 0
+    @media (max-width: 500px)
+      display: flex
+      flex-direction: column
+        
+  &__column_right
+    width: 67%
+    height: 100%
+    background: url("../img/jar-1.png") right center no-repeat
+    background-size: contain
+    @media (max-width: 1350px)
+      width: 60%
+    @media (max-width: 1100px)
+      width: 50%
+    @media (max-width: 850px)
+      padding-right: -10%
+    @media (max-width: 700px)
+      display: none
+
+// 2nd Section
+
+.section-2
+  width: 100%
+  height: 325px
+  background-image: linear-gradient(to top, #0f0816, #21172b)
+  @media (max-width: 500px)
+    height: 500px
+    padding: 50px 0 50px 20%
+  &__container
+    width: 100%
+    height: 100%
+    position: relative
+  &__column_img
+    width: 31%
+    height: 150%
+    background: url('../img/jar-2.png') center center no-repeat
+    background-size: contain
+    position: absolute
+    top: -35%
+    @media (max-width: 868px)
+      width: 20%
+      margin-left: 5%
+    @media (max-width: 700px)
+      display: none
+  &__column_counters
+    display: flex
+    float: right
+    width: 41%
+    height: 100%
+    margin-right: 19.5%
+    justify-content: space-between
+    align-items: center
+    @media (max-width: 1350px)
+      width: 60%
+      float: right
+      margin-right: 70px
+    @media (max-width: 868px)
+      width: 60%
+    @media (max-width: 700px)
+      width: 100%
+      position: absolute
+      padding: 0 50px
+    @media (max-width: 500px)
+      flex-direction: column
+      margin-left: 0
+      align-items: baseline
+      // .section-2__item
+      //   min-width: 20%
+    & h2
+      font-family: 'Lato', sans-serif
+      color: #fff
+      font-weight: 900
+      line-height: 74%
+      @media (max-width: 600px)
+        font-size: 50px
+    & p
+      text-transform: capitalize
+      margin-top: 7px
+      color: $light-gray-col
+    & p:first-child
+      font-weight: 700
+      text-transform: uppercase
+      color: $light-blue-col
+      margin-top: 25px
+  &__row-1:before
+    height: 89%
+    top: auto
+    bottom: 0
+
+// 3rd Section
+
+.section-3
+  width: 100%
+  padding: 119px 0 0 0
+  line-height: 24px
+  background: #fafcfc
+  &__container
+    width: 100%
+    margin-top: 65px
+    display: flex
+    justify-content: center
+    @media (max-width: 700px)
+      flex-wrap: wrap
+  &__column
+    width: 17.5%
+    @media (max-width: 850px)
+      width: 25%
+    @media (max-width: 700px)
+      margin: 0 30px
+    @media (max-width: 500px)
+      margin: 0 20px
+  &__column-1
+    text-align: right
+    @media (max-width: 700px)
+      order: 3
+      width: calc(50% - 60px)
+    @media (max-width: 500px)
+      width: calc(50% - 40px)
+    @media (max-width: 350px)
+      width: 100%
+    & h5
+      @media (max-width: 350px)
+          margin-right: unset
+  &__column-2
+    width: 21%
+    margin: 0 88px
+    @media (max-width: 1100px)
+      width: 30%
+      margin-right: 50px
+      position: relative
+      overflow: hidden
+    @media (max-width: 1000px)
+      width: 35%
+      margin: 0 40px
+    @media (max-width: 768px)
+      width: 40%
+      margin: 0 25px
+    @media (max-width: 700px)
+      order: 1
+      width: 100%
+      height: 300px
+    & img
+      @media (max-width: 1100px)
+        height: 100%
+        position: absolute
+        left: 20px
+        right: 0
+        margin: auto
+        object-position: center center
+        object-fit: contain
+        @media (max-width: 768px)
+          left: 0
+        @media (max-width: 700px)
+          left: 35px
+  &__column-3
+    @media (max-width: 700px)
+      order: 2
+      width: calc(50% - 60px)
+    @media (max-width: 500px)
+      width: calc(50% - 40px)
+    @media (max-width: 350px)
+      width: 100%
+  &__item
+    margin-top: 75px
+    &:first-child
+      @media (max-width: 700px)
+        margin-top: 40px
+      @media (max-width: 350px)
+        width: 100%
+    @media (max-width: 350px)
+      margin-top: 40px
+    &-headline
+      height: 45px
+      position: relative
+      & h5
+        line-height: 80%
+        margin-left: 25px
+        font-weight: 700
+        color: $dark-blue-col
+        text-transform: uppercase
+        @media (max-width: 1350px)
+          line-height: 1
+        @media (max-width: 350px)
+            text-align: left
+  &__separator
+    position: absolute
+    width: 5px
+    height: 35px
+    border-radius: 2px
+    background-color: $light-blue-col
+    top: 0
+  &__column-1 &__separator
+    right: 0
+    @media (max-width: 350px)
+      left: 0
+  &__column-1 h5
+    margin-left: auto
+    margin-right: 25px
+    @media (max-width: 350px)
+        margin-right: 0
+        margin-left: 25px
+  &__column-1 p
+    @media (max-width: 350px)
+      text-align: left
+
+
+
+// 4th Section
+
+.section-4
+  width: 100%
+  padding: 120px 0
+  &__header
+    margin-bottom: 75px 
+  &__container
+    width: 100%
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @media (max-width: 1200px)
+      justify-content: center
+      padding-left: 100px
+    @media (max-width: 1100px)
+      padding-left: 250px
+    @media (max-width: 500px)
+      padding-left: 0
+  &__column-2
+    width: 43%
+    @media (max-width: 1100px)
+      width: 40%
+    @media (max-width: 850px)
+      width: 40%
+    @media (max-width: 500px)
+      width: 70%
+  &__img
+    width: 100%
+    padding: 0 4%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    & img:first-child
+      margin-right: -67px
+      z-index: 1
+      @media (max-width: 850px)
+        width: 200px
+      @media (max-width: 700px)
+        width: 200px
+        margin-right: -150px
+      @media (max-width: 500px)
+        width: 30%
+        margin-right: 0
+    & img:nth-child(2)
+      @media (max-width: 850px)
+        width: 400px
+      @media (max-width: 500px)
+        width: 60%
+  &__column-3
+    width: 15%
+    display: flex
+    flex-wrap: wrap
+    @media (max-width: 1100px)
+      min-width: 30%
+    @media (max-width: 850px)
+      width: 60%
+  &__num-item
+    width: 50%
+    h2
+      font-size: 40px
+      font-family: 'Lato'
+      font-weight: bold
+    span
+        font-weight: 300
+        text-transform: uppercase
+        font-size: 16px
+    p
+      color: $light-blue-col
+      font-weight: normal
+      margin-top: 17px
+  .human-name
+    width: 100%
+    margin-top: 50px
+    text-transform: uppercase
+    & p:first-child
+      font-family: Raleway
+      font-size: 16px
+      font-weight: 700
+      line-height: 100%
+      color: $dark-blue-col
+    & p:last-child
+      margin-top: 8px
+      font-weight: 300
+      line-height: 110%
+      color: $dark-blue-col
+    @media (max-width: 500px)
+      margin-top: 20px
+  &__column-4, &__column-1
+    width: 5.7%
+    & button
+      background-color: transparent
+      position: relative
+      z-index: 2
+      & i
+        font-size: 70px
+        color: #c6cfd2
+  &__column-4 button
+    float: right
+  &__column-1
+    margin-left: 12%
+    @media (max-width: 1300px)
+      margin-left: 6%
+    @media (max-width: 1200px)
+      display: none
+  &__column-4
+    margin-right: 12%
+    @media (max-width: 1300px)
+      margin-right: 6%
+    @media (max-width: 1200px)
+      display: none
+
+.switch-container
+  width: 100%
+  margin-top: 50px
+  display: flex
+  justify-content: center
+.switch-circle
+  width: 13px
+  height: 13px
+  position: relative
+  background-color: #d8e4e8
+  border-radius: 13px
+  margin-left: 23px
+  &:first-child
+    margin-left: 0
+  &_active
+    background-color: $light-blue-col
+  button
+    width: 100%
+    height: 100%
+    border-radius: 13px
+    position: absolute
+    background-color: transparent
+  button:hover
+    background-color: $light-blue-col
+
+// 5th Section
+
+.section-5
+  width: 100%
+  background: url('../img/strong-man_bg.png') center center no-repeat
+  background-size: cover
+  background-attachment: fixed
+  &__bg-wrapper
+    width: 100%
+    height: 100%
+    background-color: rgba(15, 8, 22, 0.95)
+    padding: 120px 0
+  &__header
+    margin-bottom: 70px
+  &__headline
+    & h3, & span
+        color: #e5e5e5 !important
+    p
+      color: #767a7d
+  &__container
+    width: 51%
+    margin: 0 auto
+    > p
+      text-align: center
+      font-style: italic
+      line-height: 24px
+      color: #a9a9a9
+    @media (max-width: 768px)
+      width: 90%
+  &__human-info
+    width: 100%
+    margin-top: 32px
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      width: 8.5%
+      height: auto
+    .human-name
+      margin: 0 0 0 2.5%
+      line-height: 24px
+      p
+        line-height: 24px
+        &:first-child
+          color:#e5e5e5
+        &:nth-child(2)
+          color: #a9a9a9
+          font-size: 14px
+          text-transform: capitalize
+      &_underline
+        margin-top: 8px
+        width: 36px
+        height: 5px
+        border-radius: 2px
+        background-color: $light-blue-col
+  .switch-circle
+    background-color: #342e3a
+    &_active
+      background-color: $light-blue-col
+
+// 6th Section
+
+.section-6
+  width: 100%
+  padding: 120px 0
+  background-color: #fafcfc
+  &__header
+    margin-bottom: 77px
+  &__container
+    width: 63%
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    @media (max-width: 950px)
+      width: 90%
+    @media (max-width: 600px)
+      flex-wrap: wrap
+  &__column
+    width: 50%
+  &__ingredients-header
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 15px
+    border-bottom: 5px solid $dark-blue-col
+  &__header-column
+    width: 50%
+    &-1
+      text-align: left
+      & h4
+        font-family: 'Lato'
+        font-size: 24px
+        font-weight: 900
+        text-transform: uppercase
+    &-2
+      text-align: right
+      & p:first-child
+        font-weight: 900
+        color: $dark-blue-col
+        text-transform: uppercase
+      & p:last-child
+        font-weight: 300
+        color: $dark-blue-col
+  &__ingredients-content
+    margin-top: 25px
+    & button
+      width: 100%
+      padding: 15px 35px
+      margin-top: 45px
+      text-align: left
+      text-transform: uppercase
+      font-family: 'Lato'
+      font-weight: 700
+      & span
+        float: right
+        font-weight: 300
+  &__ingredients-list
+    position: relative
+    &-point
+      font-size: 16px
+      font-weight: 300
+      padding: 10px 0
+      border-bottom: 1px solid #ebebeb
+      span
+        float: right
+    .point-onHover
+      background-color: rgba(255, 255, 255, 0.5)
+      padding: 25px 15px 23px 12px
+      width: 105%
+      margin-left: -2.5%
+      margin-right: -2.5%
+      box-shadow: 0px 3px 9px 0 rgba(0, 0, 0, 0.24)
+      border: solid 1px #d7d7d7
+  &__column-1
+    @media (max-width: 600px)
+      width: 100%
+      order: 2
+  &__column-2
+    padding: 0 7.5%
+    @media (max-width: 950px)
+      padding: 0 0 0 7.5%
+    @media (max-width: 600px)
+      padding: 0
+      width: 100%
+      order: 1
+      margin-bottom: 50px
+      display: flex
+      justify-content: center
+      flex-direction: column
+    & img
+      @media (max-width: 600px)
+        width: 30%
+        margin: 0 auto
+        margin-bottom: 30px
+    & .header_separator
+      margin-top: 45px
+      @media (max-width: 600px)
+        margin: 0 auto
+      p:first-child
+        font-family: 'Raleway'
+        font-weight: 700
+        line-height: 85%
+        color: $dark-blue-col
+        margin-left: 24px
+      p:last-child
+        line-height: 85%
+        color: $dark-blue-col
+        margin-top: 8px
+        margin-left: 24px
+  &__col-2-description
+    margin-top: 25px
+    & p
+      line-height: 24px
+      color: $dark-gray-col
+
+// 7th Section
+
+.section-7
+  background-color: #f1f4f5
+  width: 100%
+  padding: 80px 0
+  & .headline h3
+    font-weight: 800
+  &__container
+    width: 63%
+    margin: 0 auto
+    @media (max-width: 1400px)
+      width: 80%
+    @media (max-width: 1100px)
+      width: 95%
+    @media (max-width: 800px)
+      width: auto
+  &__row
+    margin-top: 47px
+    display: flex
+    justify-content: space-between
+    @media (max-width: 800px)
+      width: 100%
+      overflow: scroll
+  &__column
+    width: 20%
+    height: 100px
+    border-right: 1px solid #dcdcdc
+    border-left: 1px solid #dcdcdc 
+    @media (max-width: 800px)
+      display: flex
+      flex: 0 0 200px
+    &:nth-child(1)
+      background: url('../img/1-certificate.png') center center no-repeat
+      background-size: auto 75%
+      border-left: none
+    &:nth-child(2)
+      background: url('../img/2-certificate.png') center center no-repeat
+      background-size: auto 75%
+    &:nth-child(3)
+      background: url('../img/3-certificate.png') center center no-repeat
+      background-size: auto 75%
+    &:nth-child(4)
+      background: url('../img/4-certificate.png') center center no-repeat
+      background-size: auto 75%
+    &:nth-child(5)
+      background: url('../img/5-certificate.png') center center no-repeat
+      background-size: auto 75%
+      border-right: none
+
+// 8th Section
+
+.section-8
+  width: 100%
+  &__container
+    display: flex
+    height: 100%
+    padding: 120px 0 25px
+    @media (max-width: 700px)
+      padding: 80px 0 15px
+      flex-direction: column
+  &__column-left
+    width: 61%
+    background: url('../img/jar-3.png') left center no-repeat
+    background-size: contain
+    @media (max-width: 700px)
+      width: 100%
+      height: 400px
+    @media (max-width: 500px)
+      height: 200px
+  &__column-right
+    width: 22%
+    height: 100%
+    padding: 70px 0 165px
+    @media (max-width: 1200px)
+      width: 30%
+    @media (max-width: 850px)
+      width: 38%
+    @media (max-width: 700px)
+      width: 50%
+      margin: 0 auto
+      padding: 10px 10px 50px
+    @media (max-width: 575px)
+      width: 70%
+    @media (max-width: 400px)
+      width: 90%
+    p
+      line-height: 24px
+      margin-top: 20px
+    button
+      margin-top: 35px
+      text-transform: uppercase
+    & .header_separator
+      &:before
+        height: 72%
+        top: 1px
+      h3
+        font-size: 30px
+        color: $dark-blue-col
+        font-weight: 700
+        text-transform: uppercase
+      p
+        font-size: 20px
+        color: $dark-blue-col
+        margin-top: 10px
+
+// 9th Section
+
+.section-9
+  width: 100%
+  background: url('../img/strong-girl_bg.png') center center no-repeat
+  background-size: cover
+  background-attachment: fixed
+  &__bg-wrapper
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.90)
+    padding: 120px 0
+    & .headline
+      & h3, & span
+        color: #e5e5e5 !important
+      p
+        color: #767a7d
+  &__container
+    width: 100%
+    margin-top: 32px
+    display: flex
+    justify-content: center
+  &__row
+    width: 40%
+    @media (max-width: 1400px)
+      width: 50%
+    @media (max-width: 1100px)
+      width: 60%
+    @media (max-width: 900px)
+      width: 70%
+    @media (max-width: 768px)
+      width: 90%
+    & form
+      width: 100%
+      border-radius: 10px
+      background-color: #000
+      padding: 36px 30px
+      display: flex
+      @media (max-width: 500px)
+        padding: 0
+      input
+        color: #000
+        font-size: 16px
+        font-weight: 300
+        width: 70%
+        padding: 19px 0 19px 30px
+        border-radius: 50px 0 0 50px
+        &::placeholder
+            color: #ababab
+        @media (max-width: 650px)
+          width: 60%
+          @media (max-width: 450px)
+            width: 50%
+            padding: 19px 0 19px 25px
+      button
+        width: 30%
+        font-weight: 700
+        text-transform: uppercase
+        padding: 19px 33px 19px 30px !important
+        border-radius: 0 50px 50px 0 !important
+        @media (max-width: 650px)
+          width: 40%
+        @media (max-width: 450px)
+          width: 50%
+          padding: 19px 15px 19px 15px !important
+
+// 10th Section
+
+.section-10
+  width: 100%
+  padding: 120px 0
+  &__container
+    width: 38%
+    margin: 0 auto
+    margin-top: 50px
+    @media (max-width: 550px)
+      width: 60%
+    @media (max-width: 400px)
+      width: 70%
+    & form
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      & button
+        padding: 19px 90px
+        margin: 0 auto
+        margin-top: 45px
+        text-transform: uppercase
+      & input
+        font-size: 16px
+        color: #000
+        border-bottom: 1px solid #ebebeb
+        padding: 12px 0 12px 0
+        &[placeholder="Name"]
+          width: 48%
+          @media (max-width: 768px)
+            width: 100%
+        &[placeholder="Email"]
+          width: 48%
+          @media (max-width: 768px)
+            width: 100%
+            margin-top: 30px
+        &[placeholder="Subject"]
+          width: 100%
+          margin-top: 35px
+        &::placeholder
+          color: #ababab
+      .textarea
+        width: 100%
+        color: #000
+        margin-top: 35px
+        line-height: 24px
+        font-size: 16px
+        border-bottom: 1px solid #ebebeb
+        &::placeholder
+          color: #ababab
+
+// Footer
+
+.footer
+  background-color: #f1f4f5
+  &__container
+    width: 76%
+    margin: 0 auto
+    padding: 48px 0
+    display: flex
+    justify-content: space-between
+    @media (max-width: 600px)
+      flex-direction: column
+      justify-content: center
+  &__menu
+    display: flex
+    margin-top: 26px
+    li
+      font-size: 14px
+      letter-spacing: 0.35
+      color: $dark-gray-col
+      width: 26%
+      border-right: 1px solid #d9d9d9
+      text-align: center
+      &:first-child
+        text-align: left
+        width: 20%
+      &:last-child
+        border: none
+  &__column-1
+    @media (max-width: 600px)
+      width: 70%
+      margin: 0 auto
+      text-align: center
+      margin-bottom: 40px
+  &__column-2
+    width: 16%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @media (max-width: 1000px)
+      width: 25%
+    @media (max-width: 768px)
+      width: 35%
+    @media (max-width: 600px)
+      width: 50%
+      margin: 0 auto
+
+
+
+// FORM SEND
+
+.form_standart
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    margin: auto
+    background: rgb(240,241,243,0.99) url('../img/Bean Eater-1s-200px.gif') center / 100px no-repeat
+    visibility: hidden
+    opacity: 0
+    transition: 1s
+
+.form_standart_sending::after
+  visibility: visible
+  opacity: 1
+  transition: 1s
